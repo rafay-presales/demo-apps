@@ -31,12 +31,12 @@ spec:
       - name: echo
         image: hashicorp/http-echo
         args:
-        - "-text=Blue v2"
+        - "-text=Blue v1"
         ports:
         - containerPort: 5678
         resources:
           limits:
-            cpu: 100m
+            cpu: 10m
             memory: 256Mi
 ---
 apiVersion: networking.k8s.io/v1
