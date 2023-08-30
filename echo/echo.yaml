@@ -46,7 +46,7 @@ metadata:
   namespace: echo-team-dev
 spec:
   parentRefs:
-  - name: external-regional-gateway
+  - name: shared-gateway
     namespace: infra-ns
   rules:
   - matches:
