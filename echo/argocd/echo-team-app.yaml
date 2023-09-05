@@ -11,7 +11,7 @@ spec:
     path: echo/manifest/
   destination: 
     server: https://kubernetes.default.svc
-    namespace: echo-team
+    namespace: echo-team-dev
   syncPolicy:
     syncOptions:
     - CreateNamespace=false
