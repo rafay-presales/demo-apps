@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: echo-app
+  namespace: argo-cd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/rafay-presales/demo-apps.git
+    targetRevision: main
+    path: echo/echo.yaml
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: echo-team
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=false
+    automated:
+      selfHeal: true
+      prune: true
