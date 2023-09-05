@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/rafay-presales/demo-apps.git
     targetRevision: main
-    path: echo/echo.yaml
+    path: echo/manifest/
   destination: 
     server: https://kubernetes.default.svc
     namespace: echo-team
