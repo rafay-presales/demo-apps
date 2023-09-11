@@ -1,20 +1,7 @@
-apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
 metadata:
-  name: echo-team
-  namespace: echo-team
+  name: network-policy-namespace-echo-team
 spec:
-  podSelector: {}
-  policyTypes:
-    - Ingress
-    - Egress
-  ingress:
-    - from:
-        - ipBlock:
-            cidr: 0.0.0.0/0
-      ports:
-        - port: 80
-  egress:
-    - to:
-        - ipBlock:
-            cidr: 0.0.0.0/0
+  podSelector:
+    matchLabels: {}
